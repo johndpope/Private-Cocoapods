@@ -25,11 +25,11 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   s.source_files = 'FileTransferPlay/{FileTransferManager/**/*', 
-                   'FileTransferPlay/Logger/*', 
                    'AWS/**/*'
-  s.resources = ''
+  # s.resources = ''
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   s.vendored_frameworks = 'AWSRuntime.framework', 'AWSS3.framework'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.dependency 'Reachability'
+  s.dependency 'OBLogger'
 end
